@@ -1,0 +1,39 @@
+{
+    let fun isPrime(num) {
+        var prime = true;
+
+        if (! >= num 1) then prime = false;
+        else {
+            let current = 2;
+            while (&& prime (< current num)) do {
+                prime = (!= (\ num current) 0);
+                current = (+ current 1);
+            } loop
+        } endif
+            
+        return prime;
+    } endfun
+
+    let fun isPerfect(num) {
+        var sumDivisors = 0;
+        var counter = 0;
+
+        while (< counter num) do {
+            
+            if (== 0 (\ num current )) then {
+                sumDivisors = + current sumDivisors;
+
+                if (!= current (/ num current)) then
+                    sumDivisors = + sumDivisors (/ num current);
+                endif
+            } endif
+        } loop
+
+        return == * num 2 sumDivisors;
+    } endfun
+
+    let isPrimeNumber = isPrimeNaive(123);
+
+    scn(== isPrimeNumber isPerfect(123));
+
+}
