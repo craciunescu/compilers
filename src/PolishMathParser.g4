@@ -1,6 +1,6 @@
-parser grammar polishMathParser;
+parser grammar PolishMathParser;
 
-options { tokenVocab=polishMathLexer; }
+options { tokenVocab=PolishMathLexer; }
 
 // @header {
 //    package polish;
@@ -10,7 +10,7 @@ options { tokenVocab=polishMathLexer; }
 
 ///////////////////// General Rule /////////////////////
 file
-    : block EOF
+    : statement* EOF
     ;
 
 ///////////////////// General Parameter Formats /////////////////////

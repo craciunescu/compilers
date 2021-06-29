@@ -1,4 +1,4 @@
-lexer grammar polishMathLexer;
+lexer grammar PolishMathLexer;
 
 // @header {
 //    package polish;
